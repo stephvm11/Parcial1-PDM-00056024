@@ -16,17 +16,15 @@ import com.pdm0126.orderupapp.data.Producto
 
 @Composable
 fun ProductItem(
-    productName: String,
-    productPrice: Double,
-    modifier: Modifier = Modifier
+    product: Producto
 ){
     Card(modifier = Modifier.fillMaxWidth()){
         Text(
-            text = productName,
+            text = product.nombre,
             style = MaterialTheme.typography.bodyMedium,
         )
         Text(
-            text = "${productPrice}",
+            text = "${product.precio}",
             style = MaterialTheme.typography.bodySmall
         )
 
